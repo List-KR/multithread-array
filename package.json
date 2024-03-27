@@ -1,0 +1,34 @@
+{
+  "name": "multithread-array",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "build": "tsc --declaration",
+    "lint": "tsc && eslint . --ext .ts"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "author": {
+    "email": "piquark6046@proton.me",
+    "name": "PiQuark6046",
+    "url": "https://github.com/piquark6046"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^1.7.0",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
+    "tsx": "^4.7.1",
+    "typescript-eslint": "^7.4.0"
+  },
+  "dependencies": {
+    "typescript": "^5.4.3"
+  }
+}
