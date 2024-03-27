@@ -27,5 +27,10 @@ export function MultithreadArray<T>(ArrayPara: T[], Options: MultithreadArrayOpt
     Result.push(ArrayPara.slice(I * Math.floor(ArrayPara.length / Options.Count), (I + 1) * Math.floor(ArrayPara.length / Options.Count)))
   }
 
+  ArrayPara = ArrayPara.slice(Options.Count * Math.floor(ArrayPara.length / Options.Count))
+  for (var J = 0; J < ArrayPara.length; J++) {
+    Result[J].push(ArrayPara[J])
+  }
+
   return Result
 }
