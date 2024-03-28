@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "NodeNext",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "removeComments": false,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+  },
+  "include": [
+    "index.ts",
+    "sources/**/*.ts",
+    ".eslintrc.js"
+  ]
+}
