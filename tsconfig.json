@@ -4,9 +4,10 @@
     "module": "NodeNext",
     "target": "ES2022",
     "moduleResolution": "NodeNext",
-    "removeComments": true,
+    "removeComments": false,
     "alwaysStrict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declaration": true,
   },
   "include": [
     "index.ts",

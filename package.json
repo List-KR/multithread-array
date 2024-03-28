@@ -4,7 +4,8 @@
   "type": "module",
   "description": "",
   "scripts": {
-    "build": "tsc --declaration",
+    "build": "tsc",
+    "exec": "tsx index.ts",
     "lint": "tsc && eslint . --ext .ts"
   },
   "exports": {
@@ -18,6 +19,9 @@
     "name": "PiQuark6046",
     "url": "https://github.com/piquark6046"
   },
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@stylistic/eslint-plugin": "^1.7.0",
