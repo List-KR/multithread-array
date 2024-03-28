@@ -19,6 +19,14 @@ function ProcessMultithreadArrayParameters(Options: MultithreadArrayOptions) {
   }
 }
 
+/**
+ * Splits an array into multiple subarrays based on the specified options.
+ * The reminder elements are added into the subarrays in order.
+ * @template T - The type of elements in the array.
+ * @param ArrayPara - The array to be split.
+ * @param Options - The options for splitting the array.
+ * @returns An array of subarrays, each containing a portion of the original array.
+ */
 export function MultithreadArray<T>(ArrayPara: T[], Options: MultithreadArrayOptions): T[][] {
   ProcessMultithreadArrayParameters(Options)
   
