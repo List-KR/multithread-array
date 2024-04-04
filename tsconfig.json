@@ -7,10 +7,8 @@
     "removeComments": false,
     "alwaysStrict": true,
     "skipLibCheck": true,
-    "declaration": true,
   },
   "include": [
-    "index.ts",
     "sources/**/*.ts",
     ".eslintrc.js"
   ]
