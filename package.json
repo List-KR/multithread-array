@@ -15,6 +15,14 @@
     }
   },
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/List-KR/multithread-array"
+  },
+  "keywords": [
+    "multithread",
+    "array"
+  ],
   "author": {
     "email": "piquark6046@proton.me",
     "name": "PiQuark6046",
