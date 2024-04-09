@@ -20,14 +20,14 @@ function ProcessMultithreadArrayParameters(Options: MultithreadArrayOptions) {
 }
 
 /**
- * Splits an array into multiple subarrays based on the specified options.
- * The reminder elements are added into the subarrays in order.
+ * Splits the elements of an array into subarrays that regard array of specified length as their parent.
+ * 
  * @template T - The type of elements in the array.
  * @param ArrayPara - The array to be split.
  * @param Options - The options for splitting the array.
- * @returns An array of subarrays, each containing a portion of the original array.
+ * @returns An array of subarrays, where the array contains a specified number of subarrays.
  */
-export function MultithreadArray<T>(ArrayPara: T[], Options: MultithreadArrayOptions): T[][] {
+export function SplitElementsIntoArrayLength<T>(ArrayPara: T[], Options: MultithreadArrayOptions): T[][] {
   ProcessMultithreadArrayParameters(Options)
   
   const Result: T[][] = []
@@ -41,4 +41,24 @@ export function MultithreadArray<T>(ArrayPara: T[], Options: MultithreadArrayOpt
   }
 
   return Result
+}
+
+
+/**
+ * Splits elements of an array into subarrays that have specified lengths.
+ * 
+ * @template T - The type of elements in the array.
+ * @param ArrayPara - The array to be split.
+ * @param Options - The options for splitting the array.
+ * @returns An array of subarrays, where each subarray contains a specified number of elements from the original array.
+ */
+export function SplitElementsIntoSubArrayLength<T>(ArrayPara: T[], Options: MultithreadArrayOptions): T[][] {
+  ProcessMultithreadArrayParameters(Options)
+
+	const SplittedArray = new Array<T[]>(Math.ceil(ArrayPara.length / Options.Count))
+	for (var I = 0; I < SplittedArray.length; I++) {
+		SplittedArray[I] = ArrayPara.slice(I === 0 ? I : I * Options.Count, (I + 1) * Options.Count > ArrayPara.length ? ArrayPara.length : (I + 1) * Options.Count)
+	}
+
+	return SplittedArray
 }
