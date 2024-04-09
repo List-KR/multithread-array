@@ -6,7 +6,17 @@
   "scripts": {
     "build": "pkgroll --src sources",
     "exec": "tsx sources/index.ts",
-    "lint": "tsc && eslint . --ext .ts"
+    "lint": "tsc && eslint . --ext .ts",
+    "test": "NODE_OPTIONS='--import=tsx --no-warnings' ava"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.test.ts"
+    ],
+    "extensions": {
+      "ts": "module"
+    },
+    "workerThreads": false
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -43,6 +53,7 @@
     "@types/node": "^20.12.6",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.1.1",
+    "ava": "^6.1.2",
     "eslint": "^8.57.0",
     "pkgroll": "^2.0.2",
     "tsx": "^4.7.2",
