@@ -40,15 +40,15 @@
   "license": "MIT",
   "devDependencies": {
     "@stylistic/eslint-plugin": "^1.7.0",
-    "@types/node": "^20.12.4",
+    "@types/node": "^20.12.6",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
     "pkgroll": "^2.0.2",
     "tsx": "^4.7.2",
-    "typescript-eslint": "^7.5.0"
+    "typescript-eslint": "^7.6.0"
   },
   "dependencies": {
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4"
   }
 }
