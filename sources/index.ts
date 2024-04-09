@@ -42,3 +42,23 @@ export function MultithreadArray<T>(ArrayPara: T[], Options: MultithreadArrayOpt
 
   return Result
 }
+
+
+/**
+ * Splits elements of an array into subarrays that have specified lengths.
+ * 
+ * @template T - The type of elements in the array.
+ * @param ArrayPara - The array to be split.
+ * @param Options - The options for splitting the array.
+ * @returns An array of subarrays, where each subarray contains a specified number of elements from the original array.
+ */
+export function SplitElementsIntoSubArrayLength<T>(ArrayPara: T[], Options: MultithreadArrayOptions): T[][] {
+  ProcessMultithreadArrayParameters(Options)
+
+	const SplittedArray = new Array<T[]>(Math.ceil(ArrayPara.length / Options.Count))
+	for (var I = 0; I < SplittedArray.length; I++) {
+		SplittedArray[I] = ArrayPara.slice(I === 0 ? I : I * Options.Count, (I + 1) * Options.Count > ArrayPara.length ? ArrayPara.length : (I + 1) * Options.Count)
+	}
+
+	return SplittedArray
+}
