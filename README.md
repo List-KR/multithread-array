@@ -1,4 +1,5 @@
-> [!NOTE]: Please use [toss/es-toolkit](https://github.com/toss/es-toolkit) instead.
+> [!NOTE]
+> Please use [toss/es-toolkit](https://github.com/toss/es-toolkit) instead.
 
 # Multithread-array
 Splits an array into multiple subarrays based on the specified options.
